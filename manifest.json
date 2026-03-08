@@ -1,10 +1,763 @@
 {
-  "title": "Forge: LLM",
-  "subtitle": "대규모 언어 모델(LLM)은 AI의 핵심 기술입니다.",
+  "title": "2026: LLM Essential 완전 정복",
+  "subtitle": "20챕터 102섹션 튜토리얼",
   "version": "1.0.0",
-  "lastUpdated": "2026-03-05",
+  "lastUpdated": "2026-03-08",
   "language": "ko",
   "author": "Jason",
-  "chapters": [],
+  "chapters": [
+    {
+      "id": "01-ch1-자연어-처리-개요와-개발-환경-설정",
+      "title": "Ch1. 자연어 처리 개요와 개발 환경 설정",
+      "description": "자연어 처리(NLP)의 정의, 역사, 주요 응용 분야를 살펴보고 Python 기반 NLP 개발 환경을 구축한다.",
+      "sections": [
+        {
+          "id": "01-01-자연어-처리란-무엇인가",
+          "title": "01. 자연어 처리란 무엇인가",
+          "file": "01-ch1-자연어-처리-개요와-개발-환경-설정/01-01-자연어-처리란-무엇인가.md",
+          "description": "NLP의 정의, 자연어와 인공어의 차이, NLP가 해결하는 핵심 과제(분류, 생성, 번역, 요약, QA) 소개"
+        },
+        {
+          "id": "02-02-nlp의-발전사-규칙-기반에서-llm까지",
+          "title": "02. NLP의 발전사: 규칙 기반에서 LLM까지",
+          "file": "01-ch1-자연어-처리-개요와-개발-환경-설정/02-02-nlp의-발전사-규칙-기반에서-llm까지.md",
+          "description": "규칙 기반 → 통계적 방법 → 머신러닝 → 딥러닝 → 트랜스포머 → LLM으로 이어지는 NLP 패러다임 변화 개관"
+        },
+        {
+          "id": "03-03-python-nlp-개발-환경-구축",
+          "title": "03. Python NLP 개발 환경 구축",
+          "file": "01-ch1-자연어-처리-개요와-개발-환경-설정/03-03-python-nlp-개발-환경-구축.md",
+          "description": "Python 가상환경 설정, pip를 통한 주요 라이브러리(spaCy, NLTK, scikit-learn, gensim, transformers) 설치, Jupyter Notebook 환경 준비"
+        },
+        {
+          "id": "04-04-spacy와-nltk-첫-걸음",
+          "title": "04. spaCy와 NLTK 첫 걸음",
+          "file": "01-ch1-자연어-처리-개요와-개발-환경-설정/04-04-spacy와-nltk-첫-걸음.md",
+          "description": "spaCy 파이프라인 기본 구조, NLTK 데이터 다운로드, 두 라이브러리로 간단한 문장 분석(토큰화, 품사 태깅) 실습"
+        },
+        {
+          "id": "05-05-nlp-데이터셋과-코퍼스-이해",
+          "title": "05. NLP 데이터셋과 코퍼스 이해",
+          "file": "01-ch1-자연어-처리-개요와-개발-환경-설정/05-05-nlp-데이터셋과-코퍼스-이해.md",
+          "description": "코퍼스의 개념, 주요 NLP 벤치마크 데이터셋(IMDB, AG News, SQuAD) 소개, 한국어 NLP 데이터셋 개관, 데이터 로딩 실습"
+        }
+      ]
+    },
+    {
+      "id": "02-ch2-텍스트-전처리-토큰화와-정규화",
+      "title": "Ch2. 텍스트 전처리: 토큰화와 정규화",
+      "description": "텍스트 데이터를 모델이 처리할 수 있는 형태로 변환하는 전처리 파이프라인을 구축한다. 토큰화, 정규화, 불용어 처리, 어간 추출, 표제어 추출을 다룬다.",
+      "sections": [
+        {
+          "id": "01-01-토큰화의-기초",
+          "title": "01. 토큰화의 기초",
+          "file": "02-ch2-텍스트-전처리-토큰화와-정규화/01-01-토큰화의-기초.md",
+          "description": "토큰화의 정의와 필요성, 공백 기반 토큰화, 규칙 기반 토큰화, spaCy/NLTK 토큰화 비교, 한국어 토큰화의 특수성"
+        },
+        {
+          "id": "02-02-텍스트-정규화와-클리닝",
+          "title": "02. 텍스트 정규화와 클리닝",
+          "file": "02-ch2-텍스트-전처리-토큰화와-정규화/02-02-텍스트-정규화와-클리닝.md",
+          "description": "소문자 변환, 특수문자/HTML 태그 제거, 유니코드 정규화(NFC/NFD), 숫자 처리 전략, 정규표현식 활용"
+        },
+        {
+          "id": "03-03-불용어-처리",
+          "title": "03. 불용어 처리",
+          "file": "02-ch2-텍스트-전처리-토큰화와-정규화/03-03-불용어-처리.md",
+          "description": "불용어의 정의와 목적, NLTK/spaCy 기본 불용어 리스트, 도메인별 커스텀 불용어, 불용어 제거가 성능에 미치는 영향"
+        },
+        {
+          "id": "04-04-어간-추출과-표제어-추출",
+          "title": "04. 어간 추출과 표제어 추출",
+          "file": "02-ch2-텍스트-전처리-토큰화와-정규화/04-04-어간-추출과-표제어-추출.md",
+          "description": "어간 추출(Stemming)과 표제어 추출(Lemmatization)의 차이, Porter/Snowball Stemmer, spaCy Lemmatizer, 품사 태깅과 표제어 추출의 관계"
+        },
+        {
+          "id": "05-05-전처리-파이프라인-구축-실습",
+          "title": "05. 전처리 파이프라인 구축 실습",
+          "file": "02-ch2-텍스트-전처리-토큰화와-정규화/05-05-전처리-파이프라인-구축-실습.md",
+          "description": "전처리 단계를 함수로 모듈화, 재사용 가능한 전처리 파이프라인 클래스 구현, 실제 텍스트 데이터(뉴스 기사)에 적용하는 종합 실습"
+        }
+      ]
+    },
+    {
+      "id": "03-ch3-텍스트-표현-bow와-tf-idf",
+      "title": "Ch3. 텍스트 표현: BoW와 TF-IDF",
+      "description": "텍스트를 수치 벡터로 변환하는 전통적 방법인 Bag of Words와 TF-IDF를 이론과 실습으로 학습한다.",
+      "sections": [
+        {
+          "id": "01-01-bag-of-words-모델",
+          "title": "01. Bag of Words 모델",
+          "file": "03-ch3-텍스트-표현-bow와-tf-idf/01-01-bag-of-words-모델.md",
+          "description": "BoW의 개념, 어휘 사전 구축, 문서-단어 행렬 생성, BoW의 한계(어순 무시, 차원의 저주)"
+        },
+        {
+          "id": "02-02-n-gram과-countvectorizer",
+          "title": "02. N-gram과 CountVectorizer",
+          "file": "03-ch3-텍스트-표현-bow와-tf-idf/02-02-n-gram과-countvectorizer.md",
+          "description": "유니그램, 바이그램, N-그램의 개념, scikit-learn CountVectorizer 사용법, N-그램을 통한 문맥 정보 보존"
+        },
+        {
+          "id": "03-03-tf-idf의-이론",
+          "title": "03. TF-IDF의 이론",
+          "file": "03-ch3-텍스트-표현-bow와-tf-idf/03-03-tf-idf의-이론.md",
+          "description": "TF(단어 빈도)와 IDF(역문서 빈도)의 수학적 정의, TF-IDF가 BoW를 개선하는 원리, 가중치 계산 예제"
+        },
+        {
+          "id": "04-04-tfidfvectorizer-실습",
+          "title": "04. TfidfVectorizer 실습",
+          "file": "03-ch3-텍스트-표현-bow와-tf-idf/04-04-tfidfvectorizer-실습.md",
+          "description": "scikit-learn TfidfVectorizer 파라미터(max_df, min_df, max_features, sublinear_tf), 실제 데이터에 적용, 희소 행렬 다루기"
+        },
+        {
+          "id": "05-05-문서-유사도와-검색",
+          "title": "05. 문서 유사도와 검색",
+          "file": "03-ch3-텍스트-표현-bow와-tf-idf/05-05-문서-유사도와-검색.md",
+          "description": "코사인 유사도의 정의와 계산, TF-IDF 기반 문서 유사도 측정, 간단한 문서 검색 엔진 구현 실습"
+        }
+      ]
+    },
+    {
+      "id": "04-ch4-전통적-텍스트-분류",
+      "title": "Ch4. 전통적 텍스트 분류",
+      "description": "Naive Bayes와 SVM 등 전통적 머신러닝 알고리즘을 활용한 텍스트 분류를 학습하고, 모델 평가 방법을 익힌다.",
+      "sections": [
+        {
+          "id": "01-01-naive-bayes-텍스트-분류",
+          "title": "01. Naive Bayes 텍스트 분류",
+          "file": "04-ch4-전통적-텍스트-분류/01-01-naive-bayes-텍스트-분류.md",
+          "description": "베이즈 정리 복습, Multinomial Naive Bayes의 원리, 단어 빈도 기반 스팸 분류 구현"
+        },
+        {
+          "id": "02-02-svm과-로지스틱-회귀-텍스트-분류",
+          "title": "02. SVM과 로지스틱 회귀 텍스트 분류",
+          "file": "04-ch4-전통적-텍스트-분류/02-02-svm과-로지스틱-회귀-텍스트-분류.md",
+          "description": "SVM의 직관적 이해, 선형 SVM이 고차원 텍스트 데이터에 적합한 이유, 로지스틱 회귀와 비교, scikit-learn 구현"
+        },
+        {
+          "id": "03-03-모델-평가와-성능-지표",
+          "title": "03. 모델 평가와 성능 지표",
+          "file": "04-ch4-전통적-텍스트-분류/03-03-모델-평가와-성능-지표.md",
+          "description": "혼동 행렬, 정확도, 정밀도, 재현율, F1-score, 교차 검증, 클래스 불균형 처리 전략"
+        },
+        {
+          "id": "04-04-scikit-learn-pipeline-구축",
+          "title": "04. scikit-learn Pipeline 구축",
+          "file": "04-ch4-전통적-텍스트-분류/04-04-scikit-learn-pipeline-구축.md",
+          "description": "Pipeline으로 전처리-벡터화-분류 일체화, GridSearchCV를 통한 하이퍼파라미터 튜닝, 재현 가능한 실험 관리"
+        },
+        {
+          "id": "05-05-뉴스-기사-분류-프로젝트",
+          "title": "05. 뉴스 기사 분류 프로젝트",
+          "file": "04-ch4-전통적-텍스트-분류/05-05-뉴스-기사-분류-프로젝트.md",
+          "description": "20 Newsgroups 데이터셋으로 다중 클래스 텍스트 분류 종합 실습. 전처리, 피처 추출, 모델 학습, 평가, 오류 분석까지"
+        }
+      ]
+    },
+    {
+      "id": "05-ch5-워드-임베딩-word2vec",
+      "title": "Ch5. 워드 임베딩: Word2Vec",
+      "description": "분포 가설과 Word2Vec 알고리즘(CBOW, Skip-gram)을 학습하고, Gensim으로 워드 임베딩을 학습 및 활용한다.",
+      "sections": [
+        {
+          "id": "01-01-분포-가설과-밀집-벡터-표현",
+          "title": "01. 분포 가설과 밀집 벡터 표현",
+          "file": "05-ch5-워드-임베딩-word2vec/01-01-분포-가설과-밀집-벡터-표현.md",
+          "description": "희소 벡터(BoW, TF-IDF)의 한계, 분포 가설('단어는 주변 단어로 정의된다'), 밀집 벡터의 장점, 벡터 공간 모델 개념"
+        },
+        {
+          "id": "02-02-word2vec-cbow와-skip-gram",
+          "title": "02. Word2Vec: CBOW와 Skip-gram",
+          "file": "05-ch5-워드-임베딩-word2vec/02-02-word2vec-cbow와-skip-gram.md",
+          "description": "CBOW(문맥→타겟)와 Skip-gram(타겟→문맥) 아키텍처, 슬라이딩 윈도우, 네거티브 샘플링, 학습 과정 시각적 이해"
+        },
+        {
+          "id": "03-03-gensim으로-word2vec-학습하기",
+          "title": "03. Gensim으로 Word2Vec 학습하기",
+          "file": "05-ch5-워드-임베딩-word2vec/03-03-gensim으로-word2vec-학습하기.md",
+          "description": "Gensim Word2Vec API 사용법, 코퍼스 준비, 하이퍼파라미터(vector_size, window, min_count, sg), 모델 학습과 저장"
+        },
+        {
+          "id": "04-04-임베딩-활용-유사도와-유추",
+          "title": "04. 임베딩 활용: 유사도와 유추",
+          "file": "05-ch5-워드-임베딩-word2vec/04-04-임베딩-활용-유사도와-유추.md",
+          "description": "most_similar()로 유사 단어 검색, 단어 유추(king - man + woman = queen), 임베딩 산술 연산의 의미"
+        },
+        {
+          "id": "05-05-임베딩-시각화와-품질-평가",
+          "title": "05. 임베딩 시각화와 품질 평가",
+          "file": "05-ch5-워드-임베딩-word2vec/05-05-임베딩-시각화와-품질-평가.md",
+          "description": "t-SNE와 PCA를 이용한 임베딩 2D 시각화, 사전학습 임베딩 로드(Google News Word2Vec), 임베딩 품질 평가 방법"
+        }
+      ]
+    },
+    {
+      "id": "06-ch6-워드-임베딩-심화-glove와-fasttext",
+      "title": "Ch6. 워드 임베딩 심화: GloVe와 FastText",
+      "description": "GloVe와 FastText 임베딩을 학습하고, 사전학습 임베딩의 활용법과 임베딩 기반 텍스트 분류를 실습한다.",
+      "sections": [
+        {
+          "id": "01-01-glove-전역-벡터-표현",
+          "title": "01. GloVe: 전역 벡터 표현",
+          "file": "06-ch6-워드-임베딩-심화-glove와-fasttext/01-01-glove-전역-벡터-표현.md",
+          "description": "동시 출현 행렬(Co-occurrence Matrix), GloVe 목적 함수, Word2Vec과의 차이점(지역 vs 전역 통계)"
+        },
+        {
+          "id": "02-02-fasttext-서브워드-임베딩",
+          "title": "02. FastText: 서브워드 임베딩",
+          "file": "06-ch6-워드-임베딩-심화-glove와-fasttext/02-02-fasttext-서브워드-임베딩.md",
+          "description": "문자 N-그램 기반 임베딩, OOV(미등록어) 처리 능력, FastText 학습과 Gensim 연동"
+        },
+        {
+          "id": "03-03-사전학습-임베딩-활용",
+          "title": "03. 사전학습 임베딩 활용",
+          "file": "06-ch6-워드-임베딩-심화-glove와-fasttext/03-03-사전학습-임베딩-활용.md",
+          "description": "GloVe 사전학습 벡터 다운로드와 로드, 임베딩 룩업 테이블 구축, 도메인 적합성에 따른 임베딩 선택 기준"
+        },
+        {
+          "id": "04-04-임베딩-기반-텍스트-분류",
+          "title": "04. 임베딩 기반 텍스트 분류",
+          "file": "06-ch6-워드-임베딩-심화-glove와-fasttext/04-04-임베딩-기반-텍스트-분류.md",
+          "description": "문장 임베딩(단어 벡터 평균), 임베딩 + 로지스틱 회귀 분류, TF-IDF 기반 분류와 성능 비교"
+        },
+        {
+          "id": "05-05-임베딩-방법-종합-비교",
+          "title": "05. 임베딩 방법 종합 비교",
+          "file": "06-ch6-워드-임베딩-심화-glove와-fasttext/05-05-임베딩-방법-종합-비교.md",
+          "description": "Word2Vec, GloVe, FastText의 장단점 정리, 상황별 적합한 임베딩 선택 가이드, 정적 임베딩의 한계와 문맥 임베딩으로의 전환 예고"
+        }
+      ]
+    },
+    {
+      "id": "07-ch7-pytorch-기초와-신경망-입문",
+      "title": "Ch7. PyTorch 기초와 신경망 입문",
+      "description": "딥러닝 NLP의 기반이 되는 PyTorch 프레임워크의 핵심 개념을 학습하고, 간단한 신경망을 구현한다.",
+      "sections": [
+        {
+          "id": "01-01-pytorch-텐서와-연산",
+          "title": "01. PyTorch 텐서와 연산",
+          "file": "07-ch7-pytorch-기초와-신경망-입문/01-01-pytorch-텐서와-연산.md",
+          "description": "텐서 생성, 형상 변환, 인덱싱, 브로드캐스팅, GPU 연산, NumPy 변환"
+        },
+        {
+          "id": "02-02-자동-미분과-경사-하강법",
+          "title": "02. 자동 미분과 경사 하강법",
+          "file": "07-ch7-pytorch-기초와-신경망-입문/02-02-자동-미분과-경사-하강법.md",
+          "description": "autograd 메커니즘, requires_grad, backward(), 경사 하강법의 직관적 이해, 수동으로 선형 회귀 학습"
+        },
+        {
+          "id": "03-03-nnmodule로-신경망-정의하기",
+          "title": "03. nn.Module로 신경망 정의하기",
+          "file": "07-ch7-pytorch-기초와-신경망-입문/03-03-nnmodule로-신경망-정의하기.md",
+          "description": "nn.Module 상속 구조, nn.Linear, 활성화 함수(ReLU, Sigmoid, Tanh), forward() 메서드, 모델 파라미터 확인"
+        },
+        {
+          "id": "04-04-손실-함수와-옵티마이저",
+          "title": "04. 손실 함수와 옵티마이저",
+          "file": "07-ch7-pytorch-기초와-신경망-입문/04-04-손실-함수와-옵티마이저.md",
+          "description": "CrossEntropyLoss, BCELoss, MSELoss, SGD/Adam 옵티마이저, 학습률 스케줄러 기초"
+        },
+        {
+          "id": "05-05-학습-루프와-datasetdataloader",
+          "title": "05. 학습 루프와 Dataset/DataLoader",
+          "file": "07-ch7-pytorch-기초와-신경망-입문/05-05-학습-루프와-datasetdataloader.md",
+          "description": "커스텀 Dataset 클래스, DataLoader(배치, 셔플), 학습/검증 분리, 완전한 학습 루프 구현, 텍스트 분류 간단 실습"
+        }
+      ]
+    },
+    {
+      "id": "08-ch8-순환-신경망rnn-기초",
+      "title": "Ch8. 순환 신경망(RNN) 기초",
+      "description": "시퀀스 데이터를 처리하는 순환 신경망(RNN)의 구조와 원리를 이해하고, PyTorch로 기본 RNN을 구현한다.",
+      "sections": [
+        {
+          "id": "01-01-시퀀스-데이터와-rnn의-필요성",
+          "title": "01. 시퀀스 데이터와 RNN의 필요성",
+          "file": "08-ch8-순환-신경망rnn-기초/01-01-시퀀스-데이터와-rnn의-필요성.md",
+          "description": "시퀀스 데이터의 특성, 피드포워드 신경망의 한계, RNN이 해결하는 문제, 자연어에서 순서 정보의 중요성"
+        },
+        {
+          "id": "02-02-rnn의-구조와-순전파",
+          "title": "02. RNN의 구조와 순전파",
+          "file": "08-ch8-순환-신경망rnn-기초/02-02-rnn의-구조와-순전파.md",
+          "description": "RNN 셀 구조, 은닉 상태(hidden state) 갱신 공식, 시간 축 전개, 파라미터 공유, 양방향 RNN 개념"
+        },
+        {
+          "id": "03-03-bptt와-기울기-문제",
+          "title": "03. BPTT와 기울기 문제",
+          "file": "08-ch8-순환-신경망rnn-기초/03-03-bptt와-기울기-문제.md",
+          "description": "시간 역전파(BPTT) 알고리즘, 기울기 소실과 폭발 문제, 그래디언트 클리핑, 장기 의존성 학습의 한계"
+        },
+        {
+          "id": "04-04-pytorch로-rnn-구현하기",
+          "title": "04. PyTorch로 RNN 구현하기",
+          "file": "08-ch8-순환-신경망rnn-기초/04-04-pytorch로-rnn-구현하기.md",
+          "description": "nn.RNN과 nn.RNNCell 사용법, 입력 형상(batch, seq_len, input_size), 은닉 상태 초기화, 출력 해석"
+        },
+        {
+          "id": "05-05-문자-수준-이름-분류-실습",
+          "title": "05. 문자 수준 이름 분류 실습",
+          "file": "08-ch8-순환-신경망rnn-기초/05-05-문자-수준-이름-분류-실습.md",
+          "description": "PyTorch 공식 튜토리얼 기반 문자 수준 RNN 이름 분류 구현. 원-핫 인코딩, RNN 모델 정의, 학습, 추론까지"
+        }
+      ]
+    },
+    {
+      "id": "09-ch9-lstm과-gru",
+      "title": "Ch9. LSTM과 GRU",
+      "description": "기울기 소실 문제를 해결하는 LSTM과 GRU의 게이트 메커니즘을 학습하고, 텍스트 생성에 적용한다.",
+      "sections": [
+        {
+          "id": "01-01-lstm-장단기-메모리-네트워크",
+          "title": "01. LSTM: 장단기 메모리 네트워크",
+          "file": "09-ch9-lstm과-gru/01-01-lstm-장단기-메모리-네트워크.md",
+          "description": "LSTM의 동기와 구조, 셀 상태(cell state)의 역할, 망각 게이트, 입력 게이트, 출력 게이트의 수학적 정의와 직관적 이해"
+        },
+        {
+          "id": "02-02-gru-게이트-순환-유닛",
+          "title": "02. GRU: 게이트 순환 유닛",
+          "file": "09-ch9-lstm과-gru/02-02-gru-게이트-순환-유닛.md",
+          "description": "GRU의 구조, 리셋 게이트와 업데이트 게이트, LSTM 대비 파라미터 효율성, LSTM vs GRU 선택 기준"
+        },
+        {
+          "id": "03-03-pytorch-lstmgru-구현",
+          "title": "03. PyTorch LSTM/GRU 구현",
+          "file": "09-ch9-lstm과-gru/03-03-pytorch-lstmgru-구현.md",
+          "description": "nn.LSTM과 nn.GRU 사용법, 다층 구조(num_layers), 양방향(bidirectional), 패킹된 시퀀스(pack_padded_sequence)"
+        },
+        {
+          "id": "04-04-임베딩-레이어와-패딩-처리",
+          "title": "04. 임베딩 레이어와 패딩 처리",
+          "file": "09-ch9-lstm과-gru/04-04-임베딩-레이어와-패딩-처리.md",
+          "description": "nn.Embedding 레이어, 사전학습 임베딩 로드, 가변 길이 시퀀스 패딩, 패딩 마스킹 처리"
+        },
+        {
+          "id": "05-05-lstm-기반-텍스트-생성",
+          "title": "05. LSTM 기반 텍스트 생성",
+          "file": "09-ch9-lstm과-gru/05-05-lstm-기반-텍스트-생성.md",
+          "description": "문자 수준 언어 모델 구현, 교사 강제(Teacher Forcing), 온도 기반 샘플링, 텍스트 생성 실습"
+        }
+      ]
+    },
+    {
+      "id": "10-ch10-rnn-기반-텍스트-분류와-감성-분석",
+      "title": "Ch10. RNN 기반 텍스트 분류와 감성 분석",
+      "description": "LSTM/GRU를 활용한 텍스트 분류 모델을 구축하고, 영화 리뷰 감성 분석 프로젝트를 수행한다.",
+      "sections": [
+        {
+          "id": "01-01-rnn-텍스트-분류-아키텍처",
+          "title": "01. RNN 텍스트 분류 아키텍처",
+          "file": "10-ch10-rnn-기반-텍스트-분류와-감성-분석/01-01-rnn-텍스트-분류-아키텍처.md",
+          "description": "임베딩 → RNN → 분류기 구조, 마지막 은닉 상태 vs 전체 출력 활용, 양방향 LSTM 분류기 설계"
+        },
+        {
+          "id": "02-02-데이터-전처리와-어휘-사전-구축",
+          "title": "02. 데이터 전처리와 어휘 사전 구축",
+          "file": "10-ch10-rnn-기반-텍스트-분류와-감성-분석/02-02-데이터-전처리와-어휘-사전-구축.md",
+          "description": "IMDB 데이터셋 로드, 토큰화와 어휘 사전 구축, 단어→인덱스 매핑, 시퀀스 패딩, DataLoader 구성"
+        },
+        {
+          "id": "03-03-감성-분석-모델-학습",
+          "title": "03. 감성 분석 모델 학습",
+          "file": "10-ch10-rnn-기반-텍스트-분류와-감성-분석/03-03-감성-분석-모델-학습.md",
+          "description": "BiLSTM 감성 분류 모델 구현, 사전학습 GloVe 임베딩 적용, 학습 루프 구현, 학습/검증 곡선 시각화"
+        },
+        {
+          "id": "04-04-정규화와-성능-최적화",
+          "title": "04. 정규화와 성능 최적화",
+          "file": "10-ch10-rnn-기반-텍스트-분류와-감성-분석/04-04-정규화와-성능-최적화.md",
+          "description": "드롭아웃(Dropout), 가중치 감쇠(Weight Decay), 조기 종료(Early Stopping), 학습률 스케줄링, 배치 정규화"
+        },
+        {
+          "id": "05-05-모델-평가와-오류-분석",
+          "title": "05. 모델 평가와 오류 분석",
+          "file": "10-ch10-rnn-기반-텍스트-분류와-감성-분석/05-05-모델-평가와-오류-분석.md",
+          "description": "테스트셋 평가, 혼동 행렬 분석, 오분류 사례 분석, 전통적 방법(TF-IDF+SVM)과 성능 비교, 개선 방향 논의"
+        }
+      ]
+    },
+    {
+      "id": "11-ch11-시퀀스-투-시퀀스와-기계-번역",
+      "title": "Ch11. 시퀀스-투-시퀀스와 기계 번역",
+      "description": "인코더-디코더 구조의 Seq2Seq 모델을 학습하고, 간단한 기계 번역 시스템을 구현한다.",
+      "sections": [
+        {
+          "id": "01-01-인코더-디코더-아키텍처",
+          "title": "01. 인코더-디코더 아키텍처",
+          "file": "11-ch11-시퀀스-투-시퀀스와-기계-번역/01-01-인코더-디코더-아키텍처.md",
+          "description": "Many-to-Many 문제의 정의, 인코더의 역할(입력 시퀀스 → 문맥 벡터), 디코더의 역할(문맥 벡터 → 출력 시퀀스), 정보 병목 문제"
+        },
+        {
+          "id": "02-02-번역-데이터-전처리",
+          "title": "02. 번역 데이터 전처리",
+          "file": "11-ch11-시퀀스-투-시퀀스와-기계-번역/02-02-번역-데이터-전처리.md",
+          "description": "병렬 코퍼스 준비, 소스/타겟 언어별 어휘 사전 구축, 특수 토큰(SOS, EOS, PAD), 데이터 로더 구성"
+        },
+        {
+          "id": "03-03-seq2seq-모델-구현",
+          "title": "03. Seq2Seq 모델 구현",
+          "file": "11-ch11-시퀀스-투-시퀀스와-기계-번역/03-03-seq2seq-모델-구현.md",
+          "description": "LSTM 기반 인코더와 디코더 구현, 문맥 벡터 전달, 교사 강제(Teacher Forcing) 학습, 디코딩 루프 구현"
+        },
+        {
+          "id": "04-04-번역-모델-학습과-추론",
+          "title": "04. 번역 모델 학습과 추론",
+          "file": "11-ch11-시퀀스-투-시퀀스와-기계-번역/04-04-번역-모델-학습과-추론.md",
+          "description": "학습 루프 구현, 그리디 디코딩, 빔 서치(Beam Search) 디코딩, 번역 결과 시각화"
+        },
+        {
+          "id": "05-05-bleu-점수와-번역-품질-평가",
+          "title": "05. BLEU 점수와 번역 품질 평가",
+          "file": "11-ch11-시퀀스-투-시퀀스와-기계-번역/05-05-bleu-점수와-번역-품질-평가.md",
+          "description": "BLEU 점수의 정의와 계산, N-그램 정밀도, Brevity Penalty, 번역 결과 정성적/정량적 평가, Seq2Seq의 한계"
+        }
+      ]
+    },
+    {
+      "id": "12-ch12-어텐션-메커니즘",
+      "title": "Ch12. 어텐션 메커니즘",
+      "description": "정보 병목 문제를 해결하는 어텐션 메커니즘의 원리를 학습하고, Seq2Seq에 어텐션을 적용한다.",
+      "sections": [
+        {
+          "id": "01-01-어텐션의-직관적-이해",
+          "title": "01. 어텐션의 직관적 이해",
+          "file": "12-ch12-어텐션-메커니즘/01-01-어텐션의-직관적-이해.md",
+          "description": "고정 길이 문맥 벡터의 한계, 어텐션의 핵심 아이디어(필요한 정보에 집중), Query-Key-Value 패러다임 소개"
+        },
+        {
+          "id": "02-02-bahdanau와-luong-어텐션",
+          "title": "02. Bahdanau와 Luong 어텐션",
+          "file": "12-ch12-어텐션-메커니즘/02-02-bahdanau와-luong-어텐션.md",
+          "description": "Bahdanau(Additive) 어텐션의 수학적 정의, Luong(Multiplicative) 어텐션, Dot-Product 어텐션, 세 방식의 비교"
+        },
+        {
+          "id": "03-03-어텐션-seq2seq-구현",
+          "title": "03. 어텐션 Seq2Seq 구현",
+          "file": "12-ch12-어텐션-메커니즘/03-03-어텐션-seq2seq-구현.md",
+          "description": "기존 Seq2Seq에 어텐션 레이어 추가, 어텐션 가중치 계산, 문맥 벡터 동적 생성, PyTorch 구현"
+        },
+        {
+          "id": "04-04-어텐션-가중치-시각화",
+          "title": "04. 어텐션 가중치 시각화",
+          "file": "12-ch12-어텐션-메커니즘/04-04-어텐션-가중치-시각화.md",
+          "description": "어텐션 히트맵으로 소스-타겟 정렬 시각화, 어텐션 패턴 해석, 어텐션 적용 전후 번역 품질 비교"
+        },
+        {
+          "id": "05-05-셀프-어텐션으로의-확장",
+          "title": "05. 셀프 어텐션으로의 확장",
+          "file": "12-ch12-어텐션-메커니즘/05-05-셀프-어텐션으로의-확장.md",
+          "description": "크로스 어텐션 vs 셀프 어텐션, 셀프 어텐션의 개념과 장점, 트랜스포머로 이어지는 발전 흐름 정리"
+        }
+      ]
+    },
+    {
+      "id": "13-ch13-트랜스포머-아키텍처-심층-분석",
+      "title": "Ch13. 트랜스포머 아키텍처 심층 분석",
+      "description": "'Attention Is All You Need' 논문의 트랜스포머 아키텍처를 구성 요소별로 상세히 분석한다.",
+      "sections": [
+        {
+          "id": "01-01-트랜스포머-아키텍처-전체-조망",
+          "title": "01. 트랜스포머 아키텍처 전체 조망",
+          "file": "13-ch13-트랜스포머-아키텍처-심층-분석/01-01-트랜스포머-아키텍처-전체-조망.md",
+          "description": "Attention Is All You Need 논문 소개, 인코더-디코더 전체 구조, RNN 대비 장점(병렬 처리, 장거리 의존성)"
+        },
+        {
+          "id": "02-02-스케일드-닷-프로덕트-어텐션",
+          "title": "02. 스케일드 닷-프로덕트 어텐션",
+          "file": "13-ch13-트랜스포머-아키텍처-심층-분석/02-02-스케일드-닷-프로덕트-어텐션.md",
+          "description": "Query, Key, Value 행렬의 역할, 스케일링 팩터(√dk)의 필요성, 어텐션 수식 상세 해석, 마스킹"
+        },
+        {
+          "id": "03-03-멀티헤드-어텐션",
+          "title": "03. 멀티헤드 어텐션",
+          "file": "13-ch13-트랜스포머-아키텍처-심층-분석/03-03-멀티헤드-어텐션.md",
+          "description": "멀티헤드 어텐션의 동기와 구조, 헤드별 독립적 어텐션 계산, 결합과 선형 변환, 각 헤드가 학습하는 패턴"
+        },
+        {
+          "id": "04-04-위치-인코딩",
+          "title": "04. 위치 인코딩",
+          "file": "13-ch13-트랜스포머-아키텍처-심층-분석/04-04-위치-인코딩.md",
+          "description": "셀프 어텐션의 순서 불변성 문제, 사인/코사인 위치 인코딩의 수학적 정의, 학습 가능한 위치 임베딩, 상대적 위치 인코딩 개념"
+        },
+        {
+          "id": "05-05-피드포워드-네트워크와-정규화",
+          "title": "05. 피드포워드 네트워크와 정규화",
+          "file": "13-ch13-트랜스포머-아키텍처-심층-분석/05-05-피드포워드-네트워크와-정규화.md",
+          "description": "포지션별 피드포워드 네트워크(FFN), 잔차 연결(Residual Connection), 레이어 정규화(Layer Normalization), Pre-LN vs Post-LN"
+        },
+        {
+          "id": "06-06-인코더와-디코더의-상호작용",
+          "title": "06. 인코더와 디코더의 상호작용",
+          "file": "13-ch13-트랜스포머-아키텍처-심층-분석/06-06-인코더와-디코더의-상호작용.md",
+          "description": "인코더 스택의 구조, 디코더의 마스크드 셀프 어텐션, 인코더-디코더 크로스 어텐션, 최종 출력 레이어(Linear + Softmax)"
+        }
+      ]
+    },
+    {
+      "id": "14-ch14-트랜스포머-구현-실습",
+      "title": "Ch14. 트랜스포머 구현 실습",
+      "description": "PyTorch로 트랜스포머의 핵심 구성 요소를 직접 구현하며 아키텍처를 체화한다.",
+      "sections": [
+        {
+          "id": "01-01-셀프-어텐션-직접-구현",
+          "title": "01. 셀프 어텐션 직접 구현",
+          "file": "14-ch14-트랜스포머-구현-실습/01-01-셀프-어텐션-직접-구현.md",
+          "description": "NumPy로 Scaled Dot-Product Attention 단계별 구현, Q/K/V 행렬 생성, 소프트맥스 적용, PyTorch 변환"
+        },
+        {
+          "id": "02-02-멀티헤드-어텐션-구현",
+          "title": "02. 멀티헤드 어텐션 구현",
+          "file": "14-ch14-트랜스포머-구현-실습/02-02-멀티헤드-어텐션-구현.md",
+          "description": "MultiHeadAttention 클래스 구현, 헤드 분할과 결합, 어텐션 마스킹(패딩 마스크, 미래 마스크)"
+        },
+        {
+          "id": "03-03-인코더-블록-구현",
+          "title": "03. 인코더 블록 구현",
+          "file": "14-ch14-트랜스포머-구현-실습/03-03-인코더-블록-구현.md",
+          "description": "위치 인코딩 구현, 피드포워드 네트워크, 잔차 연결 + 레이어 정규화, 인코더 블록 조립, 인코더 스택"
+        },
+        {
+          "id": "04-04-디코더-블록과-전체-모델-조립",
+          "title": "04. 디코더 블록과 전체 모델 조립",
+          "file": "14-ch14-트랜스포머-구현-실습/04-04-디코더-블록과-전체-모델-조립.md",
+          "description": "마스크드 셀프 어텐션, 크로스 어텐션, 디코더 블록 구현, 전체 Transformer 클래스 조립, 파라미터 수 확인"
+        },
+        {
+          "id": "05-05-미니-번역-태스크로-검증",
+          "title": "05. 미니 번역 태스크로 검증",
+          "file": "14-ch14-트랜스포머-구현-실습/05-05-미니-번역-태스크로-검증.md",
+          "description": "구현한 트랜스포머로 소규모 번역 태스크 학습, 학습 곡선 확인, nn.Transformer와 비교, 구현 정리"
+        }
+      ]
+    },
+    {
+      "id": "15-ch15-서브워드-토크나이제이션",
+      "title": "Ch15. 서브워드 토크나이제이션",
+      "description": "LLM의 핵심 전처리 단계인 서브워드 토크나이제이션의 주요 알고리즘(BPE, WordPiece, SentencePiece)을 학습한다.",
+      "sections": [
+        {
+          "id": "01-01-서브워드-토크나이제이션의-필요성",
+          "title": "01. 서브워드 토크나이제이션의 필요성",
+          "file": "15-ch15-서브워드-토크나이제이션/01-01-서브워드-토크나이제이션의-필요성.md",
+          "description": "단어 수준 토큰화의 문제(OOV, 거대 어휘), 문자 수준 토큰화의 한계, 서브워드의 중간 지점 전략, 형태소와 서브워드의 관계"
+        },
+        {
+          "id": "02-02-bpebyte-pair-encoding-알고리즘",
+          "title": "02. BPE(Byte Pair Encoding) 알고리즘",
+          "file": "15-ch15-서브워드-토크나이제이션/02-02-bpebyte-pair-encoding-알고리즘.md",
+          "description": "BPE의 핵심 아이디어(가장 빈번한 바이트 쌍 병합), 단계별 병합 과정, 어휘 크기와 토큰 길이의 트레이드오프"
+        },
+        {
+          "id": "03-03-wordpiece와-unigram",
+          "title": "03. WordPiece와 Unigram",
+          "file": "15-ch15-서브워드-토크나이제이션/03-03-wordpiece와-unigram.md",
+          "description": "WordPiece(BERT 사용)의 우도 기반 병합, Unigram(SentencePiece)의 삭제 기반 접근, BPE/WordPiece/Unigram 비교 정리"
+        },
+        {
+          "id": "04-04-sentencepiece와-hugging-face-tokenizers",
+          "title": "04. SentencePiece와 Hugging Face Tokenizers",
+          "file": "15-ch15-서브워드-토크나이제이션/04-04-sentencepiece와-hugging-face-tokenizers.md",
+          "description": "SentencePiece의 언어 독립적 토크나이제이션, Hugging Face Tokenizers 라이브러리, 사전학습 토크나이저 로드와 사용"
+        },
+        {
+          "id": "05-05-minbpe로-bpe-직접-구현하기",
+          "title": "05. minbpe로 BPE 직접 구현하기",
+          "file": "15-ch15-서브워드-토크나이제이션/05-05-minbpe로-bpe-직접-구현하기.md",
+          "description": "Karpathy의 minbpe 코드 분석, BPE 알고리즘 직접 구현, 학습과 인코딩/디코딩 테스트, GPT 토크나이저와 결과 비교"
+        }
+      ]
+    },
+    {
+      "id": "16-ch16-bert-양방향-사전학습-모델",
+      "title": "Ch16. BERT: 양방향 사전학습 모델",
+      "description": "BERT의 양방향 사전학습 방식과 파인튜닝 패러다임을 학습하고, 다양한 다운스트림 태스크에 적용한다.",
+      "sections": [
+        {
+          "id": "01-01-사전학습과-파인튜닝-패러다임",
+          "title": "01. 사전학습과 파인튜닝 패러다임",
+          "file": "16-ch16-bert-양방향-사전학습-모델/01-01-사전학습과-파인튜닝-패러다임.md",
+          "description": "전이학습의 개념, 사전학습-파인튜닝 패러다임의 혁신, 피처 기반 vs 파인튜닝 접근법, ELMo에서 BERT로의 발전"
+        },
+        {
+          "id": "02-02-bert의-아키텍처와-사전학습",
+          "title": "02. BERT의 아키텍처와 사전학습",
+          "file": "16-ch16-bert-양방향-사전학습-모델/02-02-bert의-아키텍처와-사전학습.md",
+          "description": "BERT의 인코더 전용 구조, MLM(Masked Language Modeling), NSP(Next Sentence Prediction), 입력 표현([CLS], [SEP], 세그먼트 임베딩)"
+        },
+        {
+          "id": "03-03-bert-변형-모델들",
+          "title": "03. BERT 변형 모델들",
+          "file": "16-ch16-bert-양방향-사전학습-모델/03-03-bert-변형-모델들.md",
+          "description": "BERT-base vs BERT-large, RoBERTa(NSP 제거, 더 많은 데이터), DistilBERT(지식 증류), ALBERT(파라미터 공유), 한국어 BERT 모델"
+        },
+        {
+          "id": "04-04-bert-다운스트림-태스크",
+          "title": "04. BERT 다운스트림 태스크",
+          "file": "16-ch16-bert-양방향-사전학습-모델/04-04-bert-다운스트림-태스크.md",
+          "description": "분류([CLS] 토큰 활용), 토큰 분류(NER), 질의응답(스팬 추출), 문장 유사도, 각 태스크별 헤드 구조"
+        },
+        {
+          "id": "05-05-hugging-face로-bert-사용하기",
+          "title": "05. Hugging Face로 BERT 사용하기",
+          "file": "16-ch16-bert-양방향-사전학습-모델/05-05-hugging-face로-bert-사용하기.md",
+          "description": "AutoModel/AutoTokenizer로 BERT 로드, 토큰화와 추론 실행, 마스크 채우기(fill-mask) 파이프라인, 임베딩 추출 실습"
+        }
+      ]
+    },
+    {
+      "id": "17-ch17-gpt-생성적-사전학습-모델",
+      "title": "Ch17. GPT: 생성적 사전학습 모델",
+      "description": "GPT 계열 모델의 자기회귀 사전학습 방식과 디코더 전용 아키텍처를 학습하고, nanoGPT로 직접 구현한다.",
+      "sections": [
+        {
+          "id": "01-01-자기회귀-언어-모델링",
+          "title": "01. 자기회귀 언어 모델링",
+          "file": "17-ch17-gpt-생성적-사전학습-모델/01-01-자기회귀-언어-모델링.md",
+          "description": "자기회귀(autoregressive) 모델의 정의, 다음 토큰 예측, 인과적 마스킹(Causal Masking), BERT(양방향) vs GPT(단방향) 비교"
+        },
+        {
+          "id": "02-02-gpt-아키텍처-상세-분석",
+          "title": "02. GPT 아키텍처 상세 분석",
+          "file": "17-ch17-gpt-생성적-사전학습-모델/02-02-gpt-아키텍처-상세-분석.md",
+          "description": "디코더 전용 트랜스포머 구조, GPT-1의 사전학습+파인튜닝 방식, GPT-2의 제로샷 학습, 모델 크기와 레이어 구성"
+        },
+        {
+          "id": "03-03-gpt-계열의-발전-gpt-2에서-gpt-4까지",
+          "title": "03. GPT 계열의 발전: GPT-2에서 GPT-4까지",
+          "file": "17-ch17-gpt-생성적-사전학습-모델/03-03-gpt-계열의-발전-gpt-2에서-gpt-4까지.md",
+          "description": "GPT-2의 스케일 업, GPT-3의 인컨텍스트 러닝, InstructGPT와 RLHF, GPT-4의 멀티모달 능력, 오픈소스 대안(LLaMA 등)"
+        },
+        {
+          "id": "04-04-nanogpt-코드-분석",
+          "title": "04. nanoGPT 코드 분석",
+          "file": "17-ch17-gpt-생성적-사전학습-모델/04-04-nanogpt-코드-분석.md",
+          "description": "Karpathy의 build-nanogpt 코드 구조 분석, GPT 모델 클래스, 학습 루프, 데이터 준비, 핵심 구현 포인트 해설"
+        },
+        {
+          "id": "05-05-미니-gpt-학습-실습",
+          "title": "05. 미니 GPT 학습 실습",
+          "file": "17-ch17-gpt-생성적-사전학습-모델/05-05-미니-gpt-학습-실습.md",
+          "description": "셰익스피어 텍스트로 소규모 GPT 학습, 학습 과정 모니터링, 텍스트 생성 테스트, 하이퍼파라미터 실험"
+        }
+      ]
+    },
+    {
+      "id": "18-ch18-hugging-face-transformers-실습",
+      "title": "Ch18. Hugging Face Transformers 실습",
+      "description": "Hugging Face Transformers 라이브러리의 핵심 기능을 학습하고, 다양한 NLP 태스크를 수행한다.",
+      "sections": [
+        {
+          "id": "01-01-hugging-face-생태계-소개",
+          "title": "01. Hugging Face 생태계 소개",
+          "file": "18-ch18-hugging-face-transformers-실습/01-01-hugging-face-생태계-소개.md",
+          "description": "Hugging Face Hub, Transformers/Datasets/Tokenizers/Accelerate 라이브러리 개관, 모델 카드와 커뮤니티"
+        },
+        {
+          "id": "02-02-pipeline-api로-빠른-추론",
+          "title": "02. Pipeline API로 빠른 추론",
+          "file": "18-ch18-hugging-face-transformers-실습/02-02-pipeline-api로-빠른-추론.md",
+          "description": "pipeline()으로 감성 분석, NER, 질의응답, 요약, 번역 수행, 태스크별 모델 자동 선택, 배치 처리"
+        },
+        {
+          "id": "03-03-automodel과-autotokenizer-심화",
+          "title": "03. AutoModel과 AutoTokenizer 심화",
+          "file": "18-ch18-hugging-face-transformers-실습/03-03-automodel과-autotokenizer-심화.md",
+          "description": "Auto 클래스의 자동 모델 매핑, from_pretrained() 내부 동작, 토크나이저 출력(input_ids, attention_mask) 상세 분석"
+        },
+        {
+          "id": "04-04-datasets-라이브러리-활용",
+          "title": "04. Datasets 라이브러리 활용",
+          "file": "18-ch18-hugging-face-transformers-실습/04-04-datasets-라이브러리-활용.md",
+          "description": "load_dataset()으로 데이터 로드, map()으로 전처리, 데이터 필터링과 셔플, 토크나이저와 연동한 데이터 파이프라인"
+        },
+        {
+          "id": "05-05-모델-비교와-벤치마크",
+          "title": "05. 모델 비교와 벤치마크",
+          "file": "18-ch18-hugging-face-transformers-실습/05-05-모델-비교와-벤치마크.md",
+          "description": "동일 태스크에 다양한 모델 적용 비교, 모델 크기와 성능 트레이드오프, 추론 속도 측정, 실무 모델 선택 기준"
+        }
+      ]
+    },
+    {
+      "id": "19-ch19-파인튜닝과-전이학습",
+      "title": "Ch19. 파인튜닝과 전이학습",
+      "description": "사전학습 모델을 특정 태스크에 파인튜닝하는 방법을 Hugging Face Trainer API와 직접 구현으로 학습한다.",
+      "sections": [
+        {
+          "id": "01-01-파인튜닝의-원리와-전략",
+          "title": "01. 파인튜닝의 원리와 전략",
+          "file": "19-ch19-파인튜닝과-전이학습/01-01-파인튜닝의-원리와-전략.md",
+          "description": "사전학습 가중치의 전이, 전체 파인튜닝 vs 헤드만 학습, 점진적 해동(Gradual Unfreezing), 학습률 전략"
+        },
+        {
+          "id": "02-02-trainer-api로-텍스트-분류-파인튜닝",
+          "title": "02. Trainer API로 텍스트 분류 파인튜닝",
+          "file": "19-ch19-파인튜닝과-전이학습/02-02-trainer-api로-텍스트-분류-파인튜닝.md",
+          "description": "TrainingArguments 설정, Trainer 클래스 사용법, 평가 지표 정의, BERT 감성 분류 파인튜닝 실습"
+        },
+        {
+          "id": "03-03-커스텀-학습-루프로-파인튜닝",
+          "title": "03. 커스텀 학습 루프로 파인튜닝",
+          "file": "19-ch19-파인튜닝과-전이학습/03-03-커스텀-학습-루프로-파인튜닝.md",
+          "description": "Trainer 없이 PyTorch로 직접 파인튜닝, AdamW 옵티마이저, 선형 학습률 스케줄러, 그래디언트 누적"
+        },
+        {
+          "id": "04-04-토큰-분류ner-파인튜닝",
+          "title": "04. 토큰 분류(NER) 파인튜닝",
+          "file": "19-ch19-파인튜닝과-전이학습/04-04-토큰-분류ner-파인튜닝.md",
+          "description": "개체명 인식(NER) 태스크 소개, BIO 태깅 체계, 토큰 분류용 데이터 전처리, BERT NER 파인튜닝"
+        },
+        {
+          "id": "05-05-모델-저장-공유-배포",
+          "title": "05. 모델 저장, 공유, 배포",
+          "file": "19-ch19-파인튜닝과-전이학습/05-05-모델-저장-공유-배포.md",
+          "description": "파인튜닝 모델 저장(save_pretrained), Hugging Face Hub 업로드, 모델 카드 작성, 간단한 Gradio 데모 구축"
+        }
+      ]
+    },
+    {
+      "id": "20-ch20-llm의-이해와-활용",
+      "title": "Ch20. LLM의 이해와 활용",
+      "description": "대규모 언어 모델(LLM)의 스케일링 법칙, 창발적 능력, 텍스트 생성 전략, 프롬프트 엔지니어링을 학습하고 종합 프로젝트를 수행한다.",
+      "sections": [
+        {
+          "id": "01-01-스케일링-법칙과-창발적-능력",
+          "title": "01. 스케일링 법칙과 창발적 능력",
+          "file": "20-ch20-llm의-이해와-활용/01-01-스케일링-법칙과-창발적-능력.md",
+          "description": "스케일링 법칙(Chinchilla, Kaplan), 모델 크기·데이터·컴퓨팅의 관계, 창발적 능력(ICL, CoT), LLM 학습 비용"
+        },
+        {
+          "id": "02-02-텍스트-생성과-디코딩-전략",
+          "title": "02. 텍스트 생성과 디코딩 전략",
+          "file": "20-ch20-llm의-이해와-활용/02-02-텍스트-생성과-디코딩-전략.md",
+          "description": "그리디 디코딩, 빔 서치, 온도 조절, Top-k 샘플링, Top-p(Nucleus) 샘플링, 반복 페널티, Hugging Face generate() API"
+        },
+        {
+          "id": "03-03-프롬프트-엔지니어링-기초",
+          "title": "03. 프롬프트 엔지니어링 기초",
+          "file": "20-ch20-llm의-이해와-활용/03-03-프롬프트-엔지니어링-기초.md",
+          "description": "제로샷/퓨샷 프롬프팅, 체인 오브 소트(Chain-of-Thought), 시스템 프롬프트, 프롬프트 템플릿 설계, 프롬프트 최적화 전략"
+        },
+        {
+          "id": "04-04-rlhf와-정렬alignment",
+          "title": "04. RLHF와 정렬(Alignment)",
+          "file": "20-ch20-llm의-이해와-활용/04-04-rlhf와-정렬alignment.md",
+          "description": "인간 피드백 기반 강화학습(RLHF)의 개념, SFT → Reward Model → PPO 파이프라인, DPO(Direct Preference Optimization), AI 안전성과 정렬 문제"
+        },
+        {
+          "id": "05-05-효율적-파인튜닝-lora와-qlora",
+          "title": "05. 효율적 파인튜닝: LoRA와 QLoRA",
+          "file": "20-ch20-llm의-이해와-활용/05-05-효율적-파인튜닝-lora와-qlora.md",
+          "description": "파라미터 효율적 파인튜닝(PEFT)의 필요성, LoRA의 저랭크 분해 원리, QLoRA의 양자화 기법, Hugging Face PEFT 라이브러리 실습"
+        },
+        {
+          "id": "06-06-nlp-종합-프로젝트",
+          "title": "06. NLP 종합 프로젝트",
+          "file": "20-ch20-llm의-이해와-활용/06-06-nlp-종합-프로젝트.md",
+          "description": "전체 과정 복습, 텍스트 전처리부터 LLM 활용까지 통합 프로젝트 설계, 질의응답 시스템 또는 텍스트 요약 파이프라인 구축, 향후 학습 로드맵"
+        }
+      ]
+    }
+  ],
   "resources": {}
 }
