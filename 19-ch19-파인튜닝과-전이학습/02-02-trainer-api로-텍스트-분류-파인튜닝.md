@@ -596,8 +596,3 @@ model = AutoModelForSequenceClassification.from_pretrained(
 ### 🔗 Related Sessions
 - [automodelforsequenceclassification](18-ch18-hugging-face-transformers-실습/03-03-automodel과-autotokenizer-심화.md) (prerequisite)
 - [autotokenizer](15-ch15-서브워드-토크나이제이션/04-04-sentencepiece와-hugging-face-tokenizers.md) (prerequisite)
-
----
-### 🔗 Related Sessions
-- [automodelforsequenceclassification](18-ch18-hugging-face-transformers-실습/03-03-automodel과-autotokenizer-심화.md) (prerequisite)
-- [autotokenizer](15-ch15-서브워드-토크나이제이션/04-04-sentencepiece와-hugging-face-tokenizers.md) (prerequisite)

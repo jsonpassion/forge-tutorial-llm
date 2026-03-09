@@ -370,8 +370,3 @@ Hugging Face는 2016년, 프랑스 출신의 클레망 들랑그(Clément Delang
 ### 🔗 Related Sessions
 - [토큰화](02-ch2-텍스트-전처리-토큰화와-정규화/01-01-토큰화의-기초.md) (prerequisite)
 - [트랜스포머 아키텍처](13-ch13-트랜스포머-아키텍처-심층-분석/01-01-트랜스포머-아키텍처-전체-조망.md) (prerequisite)
-
----
-### 🔗 Related Sessions
-- [토큰화](02-ch2-텍스트-전처리-토큰화와-정규화/01-01-토큰화의-기초.md) (prerequisite)
-- [트랜스포머 아키텍처](13-ch13-트랜스포머-아키텍처-심층-분석/01-01-트랜스포머-아키텍처-전체-조망.md) (prerequisite)
