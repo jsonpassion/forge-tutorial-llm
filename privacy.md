@@ -43,7 +43,6 @@ We may update this privacy policy from time to time. Any changes will be reflect
 
 If you have any questions about this privacy policy, please contact us at:
 
-- Email: **iamjason.bu@gmail.com**
 - GitHub: [github.com/jsonpassion](https://github.com/jsonpassion)
 
 ---
@@ -87,5 +86,4 @@ Forge: LLM Essential("본 앱")은 Jason(iamjason-bu)이 개발한 교육용 튜
 
 본 개인정보 처리방침에 대한 질문이 있으시면 아래로 연락해 주세요:
 
-- 이메일: **iamjason.bu@gmail.com**
 - GitHub: [github.com/jsonpassion](https://github.com/jsonpassion)
